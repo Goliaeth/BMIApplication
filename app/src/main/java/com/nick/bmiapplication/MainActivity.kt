@@ -15,22 +15,27 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
 
         binding.calculateButton.setOnClickListener {
-            val weight = binding.weightEditText.text.toString().toFloat()
-            val height = binding.heightEditText.text.toString().toFloat()
 
-            val myBMI = weight / (height * height)
+            if (binding.weightEditText.text.isNotEmpty() && binding.heightEditText.text.isNotEmpty()) {
+                val weight = binding.weightEditText.text.toString().toFloat()
+                val height = binding.heightEditText.text.toString().toFloat()
 
-            binding.bmiTextView.text = myBMI.toString()
+                val myBMI = weight / (height * height)
 
-            if (myBMI < 18.5) {
-                binding.bmiImageView.setImageResource(R.drawable.underweight)
-            } else if (myBMI >= 18.5 && myBMI < 24.9) {
-                binding.bmiImageView.setImageResource(R.drawable.healthy)
-            } else if (myBMI >= 24.9 && myBMI < 29.9) {
-                binding.bmiImageView.setImageResource(R.drawable.overweight)
-            } else if (myBMI >= 29.9) {
-                binding.bmiImageView.setImageResource(R.drawable.obesity)
+                binding.bmiTextView.text = myBMI.toString()
+
+                if (myBMI < 18.5) {
+                    binding.bmiImageView.setImageResource(R.drawable.underweight)
+                } else if (myBMI >= 18.5 && myBMI < 24.9) {
+                    binding.bmiImageView.setImageResource(R.drawable.healthy)
+                } else if (myBMI >= 24.9 && myBMI < 29.9) {
+                    binding.bmiImageView.setImageResource(R.drawable.overweight)
+                } else if (myBMI >= 29.9) {
+                    binding.bmiImageView.setImageResource(R.drawable.obesity)
+                }
             }
+
+
         }
 
     }
