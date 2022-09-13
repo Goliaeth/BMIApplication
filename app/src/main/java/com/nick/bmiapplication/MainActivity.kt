@@ -2,6 +2,7 @@ package com.nick.bmiapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.nick.bmiapplication.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -33,6 +34,8 @@ class MainActivity : AppCompatActivity() {
                 } else if (myBMI >= 29.9) {
                     binding.bmiImageView.setImageResource(R.drawable.obesity)
                 }
+            } else {
+                Toast.makeText(this, "Enter the needed fields", Toast.LENGTH_SHORT).show()
             }
 
 
