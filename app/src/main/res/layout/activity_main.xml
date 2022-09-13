@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:gravity="center|top"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <EditText
@@ -13,9 +13,9 @@
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_marginTop="@dimen/margin_sixteen"
+        android:digits="0123456789."
         android:gravity="center"
         android:hint="@string/str_weight"
-        android:digits="0123456789."
         android:importantForAutofill="no"
         android:inputType="number" />
 
@@ -24,8 +24,8 @@
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_marginTop="@dimen/margin_sixteen"
-        android:gravity="center"
         android:digits="0123456789."
+        android:gravity="center"
         android:hint="@string/str_height"
         android:importantForAutofill="no"
         android:inputType="number" />
@@ -35,7 +35,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_sixteen"
-        android:text="@string/str_button"/>
+        android:text="@string/str_button" />
 
     <TextView
         android:id="@+id/bmi_text_view"
@@ -51,7 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_sixteen"
-        tools:srcCompat="@drawable/healthy"
-        android:contentDescription="@string/str_image_desc"/>
+        android:contentDescription="@string/str_image_desc"
+        tools:srcCompat="@drawable/healthy" />
 
 </LinearLayout>
